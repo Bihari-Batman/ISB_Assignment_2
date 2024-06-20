@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: survey_design_negotiations
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "./run_app.sh --server.port=8501 --server.address=0.0.0.0"
+    envVars:
+      - key: STREAMLIT_ENV
+        value: production
+      - key: PORT
+        value: "8501"
